@@ -13,13 +13,29 @@ struct Pokemon: Identifiable, Codable {
     let sprites: Sprites
 
     var imageUrl: String {
-        sprites.frontDefault ?? ""
+        sprites.other?.official?.frontDefault ?? ""
     }
 }
 
 struct Sprites: Codable {
-    let frontDefault: String?
+    let other: OtherSprites?
 
+    enum CodingKeys: String, CodingKey {
+        case other
+    }
+}
+
+struct OtherSprites: Codable {
+    let official: PokemonImageDefault?
+    
+    enum CodingKeys: String, CodingKey {
+        case official = "official-artwork"
+    }
+}
+
+struct PokemonImageDefault: Codable {
+    let frontDefault: String?
+    
     enum CodingKeys: String, CodingKey {
         case frontDefault = "front_default"
     }
@@ -39,4 +55,3 @@ struct PokemonResult: Identifiable, Codable {
     let name: String
     let url: String
 }
-
