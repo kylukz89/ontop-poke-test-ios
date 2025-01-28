@@ -12,8 +12,7 @@ struct PokeDetail: Identifiable, Codable {
     let name: String
     let url: String?
 
-    var evolutionChain: UrlObject? = nil
-
+    var evolutionChain: UrlObject? = nil 
 
     enum CodingKeys: String, CodingKey {
         case id, name, url

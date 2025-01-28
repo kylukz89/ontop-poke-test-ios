@@ -38,13 +38,8 @@ struct PokeDetailView: View {
         }
         .onReceive(viewModel.$pokeDetail) { pokeDetail in
             if let pokeDetail = pokeDetail {
-                var pokemonID: String {
-                    print("=====\(pokeDetail.url)")
-                    guard let url = pokeDetail.url else { return "-1" }
-                    let components = url.split(separator: "/").map(String.init)
-                    return components.last ?? "-1"
-                }
-                viewModel.fetchPokeEvolutionDetails(id: Int(pokemonID) ?? -1)
+                let pokemonID = pokeDetail.evolutionChain?.url.extraIdByURL()
+                viewModel.fetchPokeEvolutionDetails(id: pokemonID ?? -1)
             }
         }
         .navigationTitle("TITLE")
