@@ -11,6 +11,10 @@
 		F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB92D485A5F00ED42F6 /* ContentView.swift */; };
 		F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */; };
 		F0E14DBF2D485A6100ED42F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBE2D485A6100ED42F6 /* Preview Assets.xcassets */; };
+		F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DC62D485B2400ED42F6 /* NetworkConstructor.swift */; };
+		F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DC72D485B2400ED42F6 /* NetworkService.swift */; };
+		F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */; };
+		F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		F0E14DB92D485A5F00ED42F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E14DBE2D485A6100ED42F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F0E14DC62D485B2400ED42F6 /* NetworkConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstructor.swift; sourceTree = "<group>"; };
+		F0E14DC72D485B2400ED42F6 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 		F0E14DB62D485A5F00ED42F6 /* PokeOntopTest */ = {
 			isa = PBXGroup;
 			children = (
+				F0E14DC52D485B1400ED42F6 /* Tools */,
 				F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */,
 				F0E14DB92D485A5F00ED42F6 /* ContentView.swift */,
 				F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */,
@@ -65,6 +74,41 @@
 				F0E14DBE2D485A6100ED42F6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F0E14DC52D485B1400ED42F6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F0E14DCF2D485B4E00ED42F6 /* Color */,
+				F0E14DCC2D485B2E00ED42F6 /* Statics */,
+				F0E14DC82D485B2400ED42F6 /* Network */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F0E14DC82D485B2400ED42F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F0E14DC62D485B2400ED42F6 /* NetworkConstructor.swift */,
+				F0E14DC72D485B2400ED42F6 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F0E14DCC2D485B2E00ED42F6 /* Statics */ = {
+			isa = PBXGroup;
+			children = (
+				F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */,
+			);
+			path = Statics;
+			sourceTree = "<group>";
+		};
+		F0E14DCF2D485B4E00ED42F6 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +183,10 @@
 			files = (
 				F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */,
 				F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */,
+				F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */,
+				F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */,
+				F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */,
+				F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
