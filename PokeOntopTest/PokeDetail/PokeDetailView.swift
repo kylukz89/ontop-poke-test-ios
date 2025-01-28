@@ -17,7 +17,7 @@ struct PokeDetailView: View {
         VStack(spacing: 20) {
             
             if let pokeDetail = viewModel.pokeDetail {
-                AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokeDetail.id).png"))
+                AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(pokeDetail.id).png"))
                     .frame(width: 150, height: 150)
                 Text(pokeDetail.name.capitalized)
                     .font(.largeTitle)
