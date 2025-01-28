@@ -7,41 +7,11 @@
 
 import Foundation
 
-struct Pokemon: Identifiable, Codable {
+struct PokeDetail: Identifiable, Codable {
     let id: Int
     let name: String
-    let sprites: Sprites
-
-    var imageUrl: String {
-        sprites.other?.official?.frontDefault ?? ""
-    }
 }
 
-struct Sprites: Codable {
-    let other: OtherSprites?
-
-    enum CodingKeys: String, CodingKey {
-        case other
-    }
-}
-
-struct OtherSprites: Codable {
-    let official: PokemonImageDefault?
-    
-    enum CodingKeys: String, CodingKey {
-        case official = "official-artwork"
-    }
-}
-
-struct PokemonImageDefault: Codable {
-    let frontDefault: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case frontDefault = "front_default"
-    }
-}
-
-// Root model
 struct PokemonListResponse: Codable {
     let count: Int
     let next: String?
@@ -49,7 +19,6 @@ struct PokemonListResponse: Codable {
     let results: [PokemonResult]
 }
 
-// Result model
 struct PokemonResult: Identifiable, Codable {
     let id = UUID().uuidString
     let name: String
