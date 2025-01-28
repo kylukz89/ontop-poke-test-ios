@@ -15,10 +15,11 @@ struct PokeDetailView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            
             if let pokeDetail = viewModel.pokeDetail {
-                AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(pokeDetail.id).png"))
-                    .frame(width: 150, height: 150)
+                if let id = pokeDetail.id {
+                    AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(id).png"))
+                        .frame(width: 150, height: 150)
+                }
                 Text(pokeDetail.name.capitalized)
                     .font(.largeTitle)
                     .bold()
@@ -26,6 +27,11 @@ struct PokeDetailView: View {
         }
         .onAppear {
             viewModel.fetchPokeDetail(name: pokeName)
+        }
+        .onReceive(viewModel.$pokeDetail) { pokeDetail in
+            if let id = pokeDetail?.id {
+                viewModel.fetchPokeEvolutionDetails(id: id)
+            }
         }
         .navigationTitle("TITLE")
     }

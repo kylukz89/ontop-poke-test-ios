@@ -12,6 +12,8 @@
 		47FE7B242D493454001D40D0 /* PokeDetailConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B232D493454001D40D0 /* PokeDetailConstructor.swift */; };
 		47FE7B262D493544001D40D0 /* PokeDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B252D493544001D40D0 /* PokeDetailRepository.swift */; };
 		F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CD62D491550004C6DC3 /* Constants.swift */; };
+		F04C0CD92D4948F5004C6DC3 /* PokeEvolutionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CD82D4948F5004C6DC3 /* PokeEvolutionDetail.swift */; };
+		F04C0CDB2D4950BC004C6DC3 /* PokemonHorizontalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDA2D4950BC004C6DC3 /* PokemonHorizontalList.swift */; };
 		F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */; };
 		F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB92D485A5F00ED42F6 /* ContentView.swift */; };
 		F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		47FE7B232D493454001D40D0 /* PokeDetailConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailConstructor.swift; sourceTree = "<group>"; };
 		47FE7B252D493544001D40D0 /* PokeDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailRepository.swift; sourceTree = "<group>"; };
 		F04C0CD62D491550004C6DC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F04C0CD82D4948F5004C6DC3 /* PokeEvolutionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeEvolutionDetail.swift; sourceTree = "<group>"; };
+		F04C0CDA2D4950BC004C6DC3 /* PokemonHorizontalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonHorizontalList.swift; sourceTree = "<group>"; };
 		F0E14DB42D485A5F00ED42F6 /* PokeOntopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeOntopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOntopTestApp.swift; sourceTree = "<group>"; };
 		F0E14DB92D485A5F00ED42F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 				47FE7B202D4933BE001D40D0 /* PokeDetailProtocols.swift */,
 				47FE7B1E2D49338C001D40D0 /* PokeDetailViewModel.swift */,
 				F0E14DE22D4861CC00ED42F6 /* PokeDetailView.swift */,
+				F04C0CDA2D4950BC004C6DC3 /* PokemonHorizontalList.swift */,
 			);
 			path = PokeDetail;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			children = (
 				F0E14DD32D4861A100ED42F6 /* PokeListConstructor.swift */,
 				F0E14DD42D4861A100ED42F6 /* PokeListRepository.swift */,
+				F04C0CD82D4948F5004C6DC3 /* PokeEvolutionDetail.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 				F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */,
 				F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */,
 				F0E14DDC2D4861A100ED42F6 /* PokeListConstructor.swift in Sources */,
+				F04C0CDB2D4950BC004C6DC3 /* PokemonHorizontalList.swift in Sources */,
 				F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */,
 				47FE7B1F2D49338C001D40D0 /* PokeDetailViewModel.swift in Sources */,
 				F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */,
@@ -278,6 +285,7 @@
 				F0E14DE12D4861A100ED42F6 /* PokeListViewModel.swift in Sources */,
 				F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */,
 				F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */,
+				F04C0CD92D4948F5004C6DC3 /* PokeEvolutionDetail.swift in Sources */,
 				47FE7B262D493544001D40D0 /* PokeDetailRepository.swift in Sources */,
 				F0E14DDE2D4861A100ED42F6 /* PokeListModel.swift in Sources */,
 			);
