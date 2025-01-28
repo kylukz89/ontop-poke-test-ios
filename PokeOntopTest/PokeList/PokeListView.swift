@@ -12,35 +12,37 @@ struct PokeListView: View {
     @StateObject private var viewModel = PokeListViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(viewModel.pokemonList, id: \.id) { pokemon in
-                            NavigationLink {
-                                PokeDetailView(pokeName: pokemon.name)
-                            } label: {
-                                HStack {
-                                    Text(pokemon.name.capitalized)
-                                        .font(.title)
-                                    Spacer()
+        BaseView {
+            NavigationView {
+                VStack {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(viewModel.pokemonList, id: \.id) { pokemon in
+                                NavigationLink {
+                                    PokeDetailView(pokeName: pokemon.name)
+                                } label: {
+                                    HStack {
+                                        Text(pokemon.name.capitalized)
+                                            .font(.title)
+                                        Spacer()
+                                    }
+                                    .padding()
                                 }
-                                .padding()
                             }
-                        }
-                        
-                        if viewModel.hasMoreData {
-                            ProgressView()
-                                .padding()
-                                .onAppear {
-                                    viewModel.fetchPokemonList()
-                                }
+                            
+                            if viewModel.hasMoreData {
+                                ProgressView()
+                                    .padding()
+                                    .onAppear {
+                                        viewModel.fetchPokemonList()
+                                    }
+                            }
                         }
                     }
                 }
+                .navigationTitle("Pokémon List")
             }
-            .navigationTitle("Pokémon List")
-        }
+        } 
         .onAppear {
             viewModel.fetchPokemonList()
         }

@@ -15,6 +15,10 @@
 		F04C0CD92D4948F5004C6DC3 /* PokeEvolutionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CD82D4948F5004C6DC3 /* PokeEvolutionDetail.swift */; };
 		F04C0CDB2D4950BC004C6DC3 /* PokemonHorizontalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDA2D4950BC004C6DC3 /* PokemonHorizontalList.swift */; };
 		F04C0CDD2D497E92004C6DC3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDC2D497E92004C6DC3 /* StringExtension.swift */; };
+		F04C0CDF2D498782004C6DC3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */; };
+		F04C0CE22D4987B8004C6DC3 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */; };
+		F04C0CE62D4988F6004C6DC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */; };
+		F04C0CE82D4989B8004C6DC3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CE72D4989B8004C6DC3 /* BaseView.swift */; };
 		F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */; };
 		F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB92D485A5F00ED42F6 /* ContentView.swift */; };
 		F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		F04C0CD82D4948F5004C6DC3 /* PokeEvolutionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeEvolutionDetail.swift; sourceTree = "<group>"; };
 		F04C0CDA2D4950BC004C6DC3 /* PokemonHorizontalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonHorizontalList.swift; sourceTree = "<group>"; };
 		F04C0CDC2D497E92004C6DC3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
+		F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F04C0CE72D4989B8004C6DC3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F0E14DB42D485A5F00ED42F6 /* PokeOntopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeOntopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOntopTestApp.swift; sourceTree = "<group>"; };
 		F0E14DB92D485A5F00ED42F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F04C0CE02D4987A6004C6DC3 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */,
+				F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */,
+				F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		F0E14DAB2D485A5F00ED42F6 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +153,7 @@
 		F0E14DC52D485B1400ED42F6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F04C0CE02D4987A6004C6DC3 /* Handlers */,
 				F0E14DCF2D485B4E00ED42F6 /* Color */,
 				F0E14DCC2D485B2E00ED42F6 /* Statics */,
 				F0E14DC82D485B2400ED42F6 /* Network */,
@@ -196,6 +215,7 @@
 				F0E14DD72D4861A100ED42F6 /* PokeListProtocols.swift */,
 				F0E14DD82D4861A100ED42F6 /* PokeListView.swift */,
 				F0E14DD92D4861A100ED42F6 /* PokeListViewModel.swift */,
+				F04C0CE72D4989B8004C6DC3 /* BaseView.swift */,
 			);
 			path = PokeList;
 			sourceTree = "<group>";
@@ -242,6 +262,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-US",
 			);
 			mainGroup = F0E14DAB2D485A5F00ED42F6;
 			productRefGroup = F0E14DB52D485A5F00ED42F6 /* Products */;
@@ -260,6 +281,7 @@
 			files = (
 				F0E14DBF2D485A6100ED42F6 /* Preview Assets.xcassets in Resources */,
 				F0E14DDB2D4861A100ED42F6 /* Preview Assets.xcassets in Resources */,
+				F04C0CE62D4988F6004C6DC3 /* Localizable.xcstrings in Resources */,
 				F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,15 +304,18 @@
 				F04C0CDD2D497E92004C6DC3 /* StringExtension.swift in Sources */,
 				F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */,
 				47FE7B242D493454001D40D0 /* PokeDetailConstructor.swift in Sources */,
+				F04C0CDF2D498782004C6DC3 /* NetworkMonitor.swift in Sources */,
 				F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */,
 				F0E14DDF2D4861A100ED42F6 /* PokeListProtocols.swift in Sources */,
 				F0E14DDD2D4861A100ED42F6 /* PokeListRepository.swift in Sources */,
+				F04C0CE82D4989B8004C6DC3 /* BaseView.swift in Sources */,
 				47FE7B212D4933C5001D40D0 /* PokeDetailProtocols.swift in Sources */,
 				F0E14DE12D4861A100ED42F6 /* PokeListViewModel.swift in Sources */,
 				F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */,
 				F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */,
 				F04C0CD92D4948F5004C6DC3 /* PokeEvolutionDetail.swift in Sources */,
 				47FE7B262D493544001D40D0 /* PokeDetailRepository.swift in Sources */,
+				F04C0CE22D4987B8004C6DC3 /* NoInternetView.swift in Sources */,
 				F0E14DDE2D4861A100ED42F6 /* PokeListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

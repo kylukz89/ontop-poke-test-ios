@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Evolution Chain" : {
+
+    },
+    "no_internet_message" : {
+      "comment" : "Please check your network and try again.",
+      "extractionState" : "manual"
+    },
+    "no_internet_title" : {
+      "comment" : "No Internet Connection",
+      "extractionState" : "manual"
+    },
+    "Pokemon Detail" : {
+
+    },
+    "Pokémon List" : {
+
+    }
+  },
+  "version" : "1.0"
+}
