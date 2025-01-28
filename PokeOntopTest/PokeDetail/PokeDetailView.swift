@@ -42,6 +42,6 @@ struct PokeDetailView: View {
                 viewModel.fetchPokeEvolutionDetails(id: pokemonID ?? -1)
             }
         }
-        .navigationTitle("TITLE")
+        .navigationTitle("Pokemon Detail")
     }
 }

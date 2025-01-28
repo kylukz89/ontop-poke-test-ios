@@ -47,7 +47,6 @@ struct PokeListView: View {
     }
 }
 
-
 #Preview {
     PokeListView()
 }
