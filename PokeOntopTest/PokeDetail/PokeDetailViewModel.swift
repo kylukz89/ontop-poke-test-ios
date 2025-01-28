@@ -1,10 +1,4 @@
-//
-//  PokeListViewModel.swift
-//  PokeOntopTest
-//
-//  Created by Igor Maximo on 28/01/25.
-//
-
+ 
 import SwiftUI
 
 class PokeDetailViewModel: ObservableObject {
@@ -84,4 +78,3 @@ extension PokeDetailViewModel {
         return speciesList
     }
 }
-

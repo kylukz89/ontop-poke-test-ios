@@ -1,10 +1,4 @@
-//
-//  PokemonListView.swift
-//  PokeTest
-//
-//  Created by Igor Maximo on 27/01/25.
-//
-
+ 
 import SwiftUI
 
 struct PokeListView: View {
@@ -42,7 +36,7 @@ struct PokeListView: View {
                 }
                 .navigationTitle("Pokémon List")
             }
-        } 
+        }
         .onAppear {
             viewModel.fetchPokemonList()
         }

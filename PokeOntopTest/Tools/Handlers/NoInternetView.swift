@@ -1,10 +1,4 @@
-//
-//  NoInternetView.swift
-//  PokeOntopTest
-//
-//  Created by Igor Maximo on 28/01/25.
-//
-
+ 
 import SwiftUI
 
 struct NoInternetView: View {

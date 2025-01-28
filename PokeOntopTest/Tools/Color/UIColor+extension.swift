@@ -1,10 +1,4 @@
-//
-//  UIColor+extension.swift
-//  PokeTest
-//
-//  Created by Igor Maximo on 27/01/25.
-//
-
+ 
 import UIKit
 
 extension UIColor {

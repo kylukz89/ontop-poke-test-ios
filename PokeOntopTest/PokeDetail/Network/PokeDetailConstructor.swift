@@ -1,13 +1,8 @@
-//
-//  PokeDetailConstructor.swift
-//  PokeOntopTest
-//
-//  Created by Igor Maximo on 28/01/25.
-//
-
+ 
 import Foundation
 
 internal enum PokeDetailConstructor: NetworkConstructor {
+    
     case getPokeDetail(name: String)
     case getPokeEvolutionDetails(pokeId: Int)
     
