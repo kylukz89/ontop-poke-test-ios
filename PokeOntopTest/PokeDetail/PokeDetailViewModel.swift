@@ -61,15 +61,10 @@ extension PokeDetailViewModel {
     
     private func extractPokemonNames(from step: PokeEvolutionDetail.EvolutionStep?) -> [PokeDetail] {
         guard let step else { return [] }
-        
         var speciesList: [PokeDetail] = []
-        
-        // Add the current species
         if let species = step.species {
             speciesList.append(PokeDetail(id: nil, name: species.name, url: species.url))
         }
-        
-        // Recursively add all evolutions
         for evolution in step.evolvesTo ?? [] {
             speciesList.append(contentsOf: extractPokemonNames(from: evolution))
         }
