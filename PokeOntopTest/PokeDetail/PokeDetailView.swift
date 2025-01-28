@@ -23,6 +23,14 @@ struct PokeDetailView: View {
                 Text(pokeDetail.name.capitalized)
                     .font(.largeTitle)
                     .bold()
+                if !$viewModel.speciesList.isEmpty {
+                    Text("Evolution Chain")
+                        .font(.title2)
+                        .bold()
+                        .padding(.top, 10)
+                    PokemonHorizontalList(pokemons: viewModel.speciesList)
+                        .frame(height: 150)
+                }
             }
         }
         .onAppear {

@@ -10,6 +10,7 @@ import Foundation
 struct PokeDetail: Identifiable, Codable {
     let id: Int?
     let name: String
+    let url: String?
 }
 
 struct PokemonListResponse: Codable {
