@@ -8,39 +8,39 @@
 import Foundation
 
 internal enum PokeListConstructor: NetworkConstructor {
-    case getPokemon(limit: Int, offset: Int)
+    case getPokemonSpecies(limit: Int, offset: Int)
     
     internal var path: String {
         switch self {
-        case .getPokemon:
-            return "/api/v2/pokemon"
+        case .getPokemonSpecies:
+            return "/api/v2/pokemon-species"
         }
     }
     
     internal var method: NetworkMethod {
         switch self {
-        case .getPokemon:
+        case .getPokemonSpecies:
             return .get
         }
     }
     
     internal var headers: NetworkHeader {
         switch self {
-        case .getPokemon:
+        case .getPokemonSpecies:
             return [:]
         }
     }
     
     internal var encoding: NetworkEncoder {
         switch self {
-        case .getPokemon:
+        case .getPokemonSpecies:
             return .urlEncoding
         }
     }
     
     internal var parameters: Parameters? {
         switch self {
-        case .getPokemon(let limit, let offset):
+        case .getPokemonSpecies(let limit, let offset):
             return [
                 "limit": limit,
                 "offset": offset

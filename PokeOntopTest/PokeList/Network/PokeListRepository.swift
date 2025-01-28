@@ -16,7 +16,7 @@ internal class PokeListRepository: PokeListInputProtocol {
     }
     
     func fetchPokemon(limit: Int, offset: Int) {
-        let constructor = PokeListConstructor.getPokemon(limit: limit, offset: offset)
+        let constructor = PokeListConstructor.getPokemonSpecies(limit: limit, offset: offset)
         
         networkService.request(constructor: constructor) { (result: Result<PokemonListResponse?, Error>) in
             switch result {
