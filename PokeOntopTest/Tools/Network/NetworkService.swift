@@ -18,7 +18,7 @@ internal class NetworkService: NetworkServiceProtocol {
     
     internal func request<T: Decodable>(constructor: NetworkConstructor, completion: @escaping (Result<T?, Error>) -> Void) {
         guard var urlComponents = URLComponents(string: ApiConstants.baseURL) else {
-            let error = NSError(domain: "InvalidBaseURL", code: 400, userInfo: [NSLocalizedDescriptionKey: "Base URL is invalid"])
+            let error = NSError(domain: "InvalidBaseURL", code: ErrorCode.BAD_REQUEST.rawValue, userInfo: [NSLocalizedDescriptionKey: "Base URL is invalid"])
             completion(.failure(error))
             return
         }
@@ -30,7 +30,7 @@ internal class NetworkService: NetworkServiceProtocol {
         }
         
         guard let url = urlComponents.url else {
-            let error = NSError(domain: "InvalidURL", code: 400, userInfo: [NSLocalizedDescriptionKey: "URL is invalid"])
+            let error = NSError(domain: "InvalidURL", code: ErrorCode.BAD_REQUEST.rawValue, userInfo: [NSLocalizedDescriptionKey: "URL is invalid"])
             completion(.failure(error))
             return
         }
@@ -56,7 +56,7 @@ internal class NetworkService: NetworkServiceProtocol {
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {
-                let error = NSError(domain: "InvalidResponse", code: 500, userInfo: [NSLocalizedDescriptionKey: "Invalid response from server"])
+                let error = NSError(domain: "InvalidResponse", code: ErrorCode.INTERNAL_SERVER_ERROR.rawValue, userInfo: [NSLocalizedDescriptionKey: "Invalid response from server"])
                 completion(.failure(error))
                 return
             }
@@ -67,7 +67,7 @@ internal class NetworkService: NetworkServiceProtocol {
             }
             
             guard let data = data else {
-                let error = NSError(domain: "NoData", code: 404, userInfo: [NSLocalizedDescriptionKey: "No data returned from server"])
+                let error = NSError(domain: "NoData", code: ErrorCode.NOT_FOUND.rawValue, userInfo: [NSLocalizedDescriptionKey: "No data returned from server"])
                 completion(.failure(error))
                 return
             }
@@ -79,5 +79,46 @@ internal class NetworkService: NetworkServiceProtocol {
                 completion(.failure(error))
             }
         }.resume()
+    }
+}
+
+enum ErrorCode: Int {
+    case BAD_REQUEST = 400
+    case UNAUTHORIZED = 401
+    case FORBIDDEN = 403
+    case NOT_FOUND = 404
+    case METHOD_NOT_ALLOWED = 405
+    case CONFLICT = 409
+    case UNPROCESSABLE_ENTITY = 422
+    case INTERNAL_SERVER_ERROR = 500
+    case BAD_GATEWAY = 502
+    case SERVICE_UNAVAILABLE = 503
+    case GATEWAY_TIMEOUT = 504
+    
+    var description: String {
+        switch self {
+        case .BAD_REQUEST:
+            return "Bad Request"
+        case .UNAUTHORIZED:
+            return "Unauthorized"
+        case .FORBIDDEN:
+            return "Forbidden"
+        case .NOT_FOUND:
+            return "Not Found"
+        case .METHOD_NOT_ALLOWED:
+            return "Method Not Allowed"
+        case .CONFLICT:
+            return "Conflict"
+        case .UNPROCESSABLE_ENTITY:
+            return "Unprocessable Entity"
+        case .INTERNAL_SERVER_ERROR:
+            return "Internal Server Error"
+        case .BAD_GATEWAY:
+            return "Bad Gateway"
+        case .SERVICE_UNAVAILABLE:
+            return "Service Unavailable"
+        case .GATEWAY_TIMEOUT:
+            return "Gateway Timeout"
+        }
     }
 }
