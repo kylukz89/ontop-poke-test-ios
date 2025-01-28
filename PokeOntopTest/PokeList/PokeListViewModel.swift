@@ -6,24 +6,25 @@
 //
 
 import SwiftUI
-import Combine
 
 class PokeListViewModel: ObservableObject {
+    
     @Published var pokemonList: [PokemonResult] = []
-    private var cancellables = Set<AnyCancellable>()
+    @Published var isLoading = false
+     
     private var repository: PokeListInputProtocol
+    private var currentPage = 0
+    var hasMoreData = true
     
     init(repository: PokeListInputProtocol = PokeListRepository()) {
         self.repository = repository
-        
         self.repository.output = self
-        
-        // TODO: DELETE
-//        pokemonList = [PokemonResult(name: "test", url: "sadas") ]
     }
 
     func fetchPokemonList() {
-        repository.fetchPokemon(limit: 30, offset: 0)
+        guard !isLoading && hasMoreData else { return }
+        isLoading = true
+        repository.fetchPokemon(limit: Constants.itemsPerPage, offset: currentPage)
     }
 }
 
@@ -32,12 +33,17 @@ extension PokeListViewModel: PokeListOutputProtocol {
     func fetchPokemonSuccess(response: PokemonListResponse?) {
         DispatchQueue.main.async {
             if let response {
-                self.pokemonList = response.results
+                self.pokemonList.append(contentsOf: response.results)
+                self.hasMoreData = response.results.count == Constants.itemsPerPage
+                self.currentPage += Constants.itemsPerPage
+            } else {
+                self.hasMoreData = false
             }
+            self.isLoading = false
         }
     }
     
     func fetchPokemonFailure(error: Error) {
-        print(error.localizedDescription)
+        DispatchQueue.main.async { self.isLoading = false }
     }
 }

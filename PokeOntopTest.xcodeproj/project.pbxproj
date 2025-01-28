@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CD62D491550004C6DC3 /* Constants.swift */; };
 		F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */; };
 		F0E14DBA2D485A5F00ED42F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB92D485A5F00ED42F6 /* ContentView.swift */; };
 		F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F04C0CD62D491550004C6DC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0E14DB42D485A5F00ED42F6 /* PokeOntopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeOntopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOntopTestApp.swift; sourceTree = "<group>"; };
 		F0E14DB92D485A5F00ED42F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */,
+				F04C0CD62D491550004C6DC3 /* Constants.swift */,
 			);
 			path = Statics;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				F0E14DDF2D4861A100ED42F6 /* PokeListProtocols.swift in Sources */,
 				F0E14DDD2D4861A100ED42F6 /* PokeListRepository.swift in Sources */,
 				F0E14DE12D4861A100ED42F6 /* PokeListViewModel.swift in Sources */,
+				F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */,
 				F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */,
 				F0E14DDE2D4861A100ED42F6 /* PokeListModel.swift in Sources */,
 			);

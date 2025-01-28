@@ -15,16 +15,26 @@ struct PokeListView: View {
         NavigationView {
             VStack {
                 ScrollView {
-                    ForEach(viewModel.pokemonList, id: \.id) { pokemon in
-                        NavigationLink {
-                            PokemonDetailView(pokemon: pokemon)
-                        } label: {
-                            HStack {
-                                Text(pokemon.name.capitalized)
-                                    .font(.title)
-                                Spacer()
+                    LazyVStack {
+                        ForEach(viewModel.pokemonList, id: \.id) { pokemon in
+                            NavigationLink {
+                                PokemonDetailView(pokemon: pokemon)
+                            } label: {
+                                HStack {
+                                    Text(pokemon.name.capitalized)
+                                        .font(.title)
+                                    Spacer()
+                                }
+                                .padding()
                             }
-                            .padding()
+                        }
+                        
+                        if viewModel.hasMoreData {
+                            ProgressView()
+                                .padding()
+                                .onAppear {
+                                    viewModel.fetchPokemonList()
+                                }
                         }
                     }
                 }
@@ -36,6 +46,7 @@ struct PokeListView: View {
         }
     }
 }
+
 
 #Preview {
     PokeListView()
