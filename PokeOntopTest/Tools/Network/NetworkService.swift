@@ -38,6 +38,9 @@ internal class NetworkService: NetworkServiceProtocol {
         var request = URLRequest(url: url)
         request.httpMethod = constructor.method.rawValue
         request.allHTTPHeaderFields = constructor.headers
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.setValue("no-store", forHTTPHeaderField: "Pragma")
         
         if constructor.encoding == .json,
            let parameters = constructor.parameters {
