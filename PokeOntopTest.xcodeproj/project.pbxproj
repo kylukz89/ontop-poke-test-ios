@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		47FE7B1F2D49338C001D40D0 /* PokeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B1E2D49338C001D40D0 /* PokeDetailViewModel.swift */; };
 		47FE7B212D4933C5001D40D0 /* PokeDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B202D4933BE001D40D0 /* PokeDetailProtocols.swift */; };
-		47FE7B242D493454001D40D0 /* PokeDetailtConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B232D493454001D40D0 /* PokeDetailtConstructor.swift */; };
+		47FE7B242D493454001D40D0 /* PokeDetailConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B232D493454001D40D0 /* PokeDetailConstructor.swift */; };
 		47FE7B262D493544001D40D0 /* PokeDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE7B252D493544001D40D0 /* PokeDetailRepository.swift */; };
 		F04C0CD72D491550004C6DC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CD62D491550004C6DC3 /* Constants.swift */; };
 		F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */; };
@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		47FE7B1E2D49338C001D40D0 /* PokeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailViewModel.swift; sourceTree = "<group>"; };
 		47FE7B202D4933BE001D40D0 /* PokeDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailProtocols.swift; sourceTree = "<group>"; };
-		47FE7B232D493454001D40D0 /* PokeDetailtConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailtConstructor.swift; sourceTree = "<group>"; };
+		47FE7B232D493454001D40D0 /* PokeDetailConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailConstructor.swift; sourceTree = "<group>"; };
 		47FE7B252D493544001D40D0 /* PokeDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailRepository.swift; sourceTree = "<group>"; };
 		F04C0CD62D491550004C6DC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0E14DB42D485A5F00ED42F6 /* PokeOntopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeOntopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				47FE7B252D493544001D40D0 /* PokeDetailRepository.swift */,
-				47FE7B232D493454001D40D0 /* PokeDetailtConstructor.swift */,
+				47FE7B232D493454001D40D0 /* PokeDetailConstructor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 				F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */,
 				47FE7B1F2D49338C001D40D0 /* PokeDetailViewModel.swift in Sources */,
 				F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */,
-				47FE7B242D493454001D40D0 /* PokeDetailtConstructor.swift in Sources */,
+				47FE7B242D493454001D40D0 /* PokeDetailConstructor.swift in Sources */,
 				F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */,
 				F0E14DDF2D4861A100ED42F6 /* PokeListProtocols.swift in Sources */,
 				F0E14DDD2D4861A100ED42F6 /* PokeListRepository.swift in Sources */,
