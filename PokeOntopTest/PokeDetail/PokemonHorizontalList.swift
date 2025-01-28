@@ -11,11 +11,7 @@ struct PokemonHorizontalList: View {
                 let size: CGFloat = 150
                 ForEach(pokemons, id:\.name) { pokemon in
                     VStack {
-                        var pokemonID: String {
-                            guard let url = pokemon.url else { return "0" }
-                            let components = url.split(separator: "/").map(String.init)
-                            return components.last ?? "0"
-                        }
+                        let pokemonID = pokemon.url.extraIdByURL()
                         AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(pokemonID).png")) { image in
                             image
                                 .resizable()
