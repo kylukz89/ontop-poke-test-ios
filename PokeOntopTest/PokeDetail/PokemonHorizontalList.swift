@@ -8,29 +8,36 @@
 import SwiftUI
 
 struct PokemonHorizontalList: View {
+    
     let pokemons: [PokeDetail]
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16) {
-                ForEach(pokemons) { pokemon in
+                let size: CGFloat = 150
+                ForEach(pokemons, id:\.name) { pokemon in
                     VStack {
-                        AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(pokemon.id).png")) { image in
+                        var pokemonID: String {
+                            guard let url = pokemon.url else { return "0" }
+                            let components = url.split(separator: "/").map(String.init)
+                            return components.last ?? "0"
+                        }
+                        AsyncImage(url: URL(string: "\(ApiConstants.imageRenderer)\(pokemonID).png")) { image in
                             image
                                 .resizable()
-                                .frame(width: 150, height: 150)
+                                .frame(width: size, height: size)
                                 .scaledToFit()
                         } placeholder: {
                             ProgressView()
-                                .frame(width: 150, height: 150)
+                                .frame(width: size, height: size)
                         }
                         Text(pokemon.name.capitalized)
                             .font(.headline)
                             .lineLimit(1)
-                            .frame(maxWidth: 150)
+                            .frame(maxWidth: size)
                             .multilineTextAlignment(.center)
                     }
-                    .frame(width: 150)
+                    .frame(width: size)
                 }
             }
             .padding(.horizontal)

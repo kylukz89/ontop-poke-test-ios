@@ -48,3 +48,5 @@ struct PokeEvolutionDetail: Codable, Identifiable {
         let url: String
     }
 }
+
+
