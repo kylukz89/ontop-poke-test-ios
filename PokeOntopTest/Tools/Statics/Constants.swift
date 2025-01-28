@@ -9,7 +9,6 @@ import Foundation
 
 internal final class Constants {
     
-    static let baseURL = "https://pokeapi.co/api/v2/"
     static let itemsPerPage = 30
     
 }
