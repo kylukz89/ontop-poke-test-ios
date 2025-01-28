@@ -18,7 +18,7 @@ struct PokeListView: View {
                     LazyVStack {
                         ForEach(viewModel.pokemonList, id: \.id) { pokemon in
                             NavigationLink {
-                                PokemonDetailView(pokemon: pokemon)
+                                PokeDetailView(pokeName: pokemon.name)
                             } label: {
                                 HStack {
                                     Text(pokemon.name.capitalized)
