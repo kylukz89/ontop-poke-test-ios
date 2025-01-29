@@ -6,7 +6,6 @@ struct PokeItemView: View {
 
     var body: some View {
         ZStack {
-            // Fundo cinza com bordas arredondadas
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.gray.opacity(0.2))
                 .frame(height: 140)
@@ -34,7 +33,6 @@ struct PokeItemView: View {
                     .offset(y: -15)
             }
         }
-//        .frame(width: 150, height: 120)
     }
 }
 
