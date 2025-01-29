@@ -6,6 +6,7 @@ class PokeDetailViewModel: ObservableObject {
     @Published var pokeDetail: PokeDetail?
     @Published var pokeEvolutionDetail: PokeEvolutionDetail?
     @Published var speciesList: [PokeDetail] = []
+    @Published var errorApi: Error?
     
     private var repository: PokeDetailInputProtocol
     
@@ -35,9 +36,7 @@ extension PokeDetailViewModel: PokeDetailOutputProtocol {
         }
     }
 
-    func fetchPokeEvolutionDetailsFailure(error: any Error) {
-        print(error.localizedDescription)
-    }
+    func fetchPokeEvolutionDetailsFailure(error: any Error) {}
     
     func fetchPokeDetailSuccess(response: PokeDetail?) {
         DispatchQueue.main.async {
@@ -46,8 +45,10 @@ extension PokeDetailViewModel: PokeDetailOutputProtocol {
     }
     
     func fetchPokeDetailFailure(error: Error) {
-        print(error.localizedDescription)
-    }
+        DispatchQueue.main.async {
+            self.errorApi = error
+        }
+    } 
 }
 
 // MARK: - Evolution Extraction Logic

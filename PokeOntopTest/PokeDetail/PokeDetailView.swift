@@ -1,14 +1,14 @@
- 
 import SwiftUI
 
 struct PokeDetailView: View {
     
     @StateObject private var viewModel = PokeDetailViewModel()
+    @State private var errorScreenType: ErrorScreenType?
     
     let pokeName: String
-
+    
     var body: some View {
-        BaseView {
+        BaseView(errorType: $errorScreenType) {
             ScrollView {
                 VStack(spacing: 20) {
                     if let pokeDetail = viewModel.pokeDetail {
@@ -57,7 +57,6 @@ struct PokeDetailView: View {
                                 }
                                 .padding()
                             }
-
                         }
                     }
                 }
@@ -72,6 +71,22 @@ struct PokeDetailView: View {
                 viewModel.fetchPokeEvolutionDetails(id: pokemonID ?? -1)
             }
         }
+        .onReceive(viewModel.$errorApi) { error in
+            if let _ = error {
+                errorScreenType = .apiError(retryAction: {
+                    viewModel.fetchPokeDetail(name: pokeName)
+                })
+            } else {
+                errorScreenType = nil
+            }
+        }
         .navigationTitle("Pokemon Detail")
+    }
+    
+    private func determineErrorType() -> ErrorScreenType? {
+        if viewModel.pokeDetail == nil {
+            return .apiError(retryAction: { viewModel.fetchPokeDetail(name: pokeName) })
+        }
+        return nil
     }
 }

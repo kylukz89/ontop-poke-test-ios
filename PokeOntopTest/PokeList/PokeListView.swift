@@ -5,11 +5,12 @@ struct PokeListView: View {
     @StateObject private var viewModel = PokeListViewModel()
     @State private var showScrollToTopButton = false
     @State private var scrollProxy: ScrollViewProxy?
+    @State private var errorScreenType: ErrorScreenType?
 
     private let gridColumns = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        BaseView {
+        BaseView(errorType: $errorScreenType) {
             NavigationView {
                 ZStack {
                     ScrollViewReader { proxy in
