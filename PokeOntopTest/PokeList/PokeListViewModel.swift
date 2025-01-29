@@ -3,7 +3,7 @@ import SwiftUI
 
 class PokeListViewModel: ObservableObject {
     
-    @Published var pokemonList: [PokemonResult] = []
+    @Published var pokemonList: [PokeDetail] = []
     @Published var isLoading = false
      
     private var repository: PokeListInputProtocol

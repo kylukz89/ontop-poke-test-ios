@@ -5,22 +5,20 @@ struct PokeListView: View {
     
     @StateObject private var viewModel = PokeListViewModel()
     
+    private let gridColumns = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
         BaseView {
             NavigationView {
                 VStack {
                     ScrollView {
-                        LazyVStack {
-                            ForEach(viewModel.pokemonList, id: \.id) { pokemon in
+                        LazyVGrid(columns: gridColumns, spacing: 8) {
+                            ForEach(Array(viewModel.pokemonList.enumerated()), id: \.element.name) { index, pokemon in
                                 NavigationLink {
                                     PokeDetailView(pokeName: pokemon.name)
                                 } label: {
-                                    HStack {
-                                        Text(pokemon.name.capitalized)
-                                            .font(.title)
-                                        Spacer()
-                                    }
-                                    .padding()
+                                    PokeItemView(id: index + 1, name: pokemon.name)
+                                        .padding()
                                 }
                             }
                             
@@ -32,6 +30,7 @@ struct PokeListView: View {
                                     }
                             }
                         }
+                        .padding(.horizontal)
                     }
                 }
                 .navigationTitle("Pokémon List")
