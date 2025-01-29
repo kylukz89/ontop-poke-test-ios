@@ -17,8 +17,8 @@
 		F04C0CDD2D497E92004C6DC3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDC2D497E92004C6DC3 /* StringExtension.swift */; };
 		F04C0CDF2D498782004C6DC3 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */; };
 		F04C0CE22D4987B8004C6DC3 /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */; };
-		F04C0CE62D4988F6004C6DC3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */; };
 		F04C0CE82D4989B8004C6DC3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C0CE72D4989B8004C6DC3 /* BaseView.swift */; };
+		F04C0CED2D4A51F5004C6DC3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F04C0CEB2D4A51F5004C6DC3 /* Localizable.strings */; };
 		F0E14DB82D485A5F00ED42F6 /* PokeOntopTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */; };
 		F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */; };
 		F0E14DBF2D485A6100ED42F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DBE2D485A6100ED42F6 /* Preview Assets.xcassets */; };
@@ -47,8 +47,8 @@
 		F04C0CDC2D497E92004C6DC3 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
-		F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F04C0CE72D4989B8004C6DC3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F04C0CEC2D4A51F5004C6DC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0E14DB42D485A5F00ED42F6 /* PokeOntopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeOntopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeOntopTestApp.swift; sourceTree = "<group>"; };
 		F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 			children = (
 				F04C0CDE2D498782004C6DC3 /* NetworkMonitor.swift */,
 				F04C0CE12D4987B8004C6DC3 /* NoInternetView.swift */,
-				F04C0CE52D4988F6004C6DC3 /* Localizable.xcstrings */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -134,6 +133,7 @@
 				F0E14DB72D485A5F00ED42F6 /* PokeOntopTestApp.swift */,
 				F0E14DBB2D485A6100ED42F6 /* Assets.xcassets */,
 				F0E14DBD2D485A6100ED42F6 /* Preview Content */,
+				F04C0CEB2D4A51F5004C6DC3 /* Localizable.strings */,
 			);
 			path = PokeOntopTest;
 			sourceTree = "<group>";
@@ -277,8 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E14DBF2D485A6100ED42F6 /* Preview Assets.xcassets in Resources */,
+				F04C0CED2D4A51F5004C6DC3 /* Localizable.strings in Resources */,
 				F0E14DDB2D4861A100ED42F6 /* Preview Assets.xcassets in Resources */,
-				F04C0CE62D4988F6004C6DC3 /* Localizable.xcstrings in Resources */,
 				F0E14DBC2D485A6100ED42F6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +317,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F04C0CEB2D4A51F5004C6DC3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F04C0CEC2D4A51F5004C6DC3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F0E14DC02D485A6100ED42F6 /* Debug */ = {

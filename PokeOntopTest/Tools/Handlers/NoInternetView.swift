@@ -11,12 +11,12 @@ struct NoInternetView: View {
                 .frame(width: 80, height: 80)
                 .foregroundColor(.red)
 
-            Text(String(localized: "no_internet_title"))
+            Text(NSLocalizedString("no_internet_title", comment: ""))
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, 10)
 
-            Text(String(localized: "no_internet_message"))
+            Text(NSLocalizedString("no_internet_message", comment: ""))
                 .font(.body)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
