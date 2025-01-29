@@ -2,21 +2,61 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Evolution Chain" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evolution Chain"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "no_internet_message" : {
       "comment" : "Please check your network and try again.",
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check your network and try again."
+          }
+        }
+      }
     },
     "no_internet_title" : {
       "comment" : "No Internet Connection",
-      "extractionState" : "manual"
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Internet Connection"
+          }
+        }
+      }
     },
     "Pokemon Detail" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokemon Detail"
+          }
+        }
+      }
     },
     "Pokémon List" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokémon List"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
