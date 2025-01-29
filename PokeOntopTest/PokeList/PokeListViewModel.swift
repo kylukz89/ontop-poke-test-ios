@@ -1,14 +1,14 @@
- 
+
 import SwiftUI
 
-class PokeListViewModel: ObservableObject {
+class PokeListViewModel: PokeListViewModelProtocol {
     
     @Published var pokemonList: [PokeDetail] = []
     @Published var isLoading = false
-     
+    @Published var hasMoreData = true
+    
     private var repository: PokeListInputProtocol
     private var currentPage = 0
-    var hasMoreData = true
     
     init(repository: PokeListInputProtocol = PokeListRepository()) {
         self.repository = repository
@@ -38,6 +38,8 @@ extension PokeListViewModel: PokeListOutputProtocol {
     }
     
     func fetchPokemonFailure(error: Error) {
-        DispatchQueue.main.async { self.isLoading = false }
+        DispatchQueue.main.async {
+            self.isLoading = false
+        }
     }
 }
