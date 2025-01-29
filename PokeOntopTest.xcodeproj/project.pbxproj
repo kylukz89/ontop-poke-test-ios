@@ -34,7 +34,6 @@
 		F0E14DC92D485B2400ED42F6 /* NetworkConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DC62D485B2400ED42F6 /* NetworkConstructor.swift */; };
 		F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DC72D485B2400ED42F6 /* NetworkService.swift */; };
 		F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */; };
-		F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */; };
 		F0E14DDB2D4861A100ED42F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E14DD12D4861A100ED42F6 /* Preview Assets.xcassets */; };
 		F0E14DDC2D4861A100ED42F6 /* PokeListConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DD32D4861A100ED42F6 /* PokeListConstructor.swift */; };
 		F0E14DDD2D4861A100ED42F6 /* PokeListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E14DD42D4861A100ED42F6 /* PokeListRepository.swift */; };
@@ -84,7 +83,6 @@
 		F0E14DC62D485B2400ED42F6 /* NetworkConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstructor.swift; sourceTree = "<group>"; };
 		F0E14DC72D485B2400ED42F6 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F0E14DCB2D485B2E00ED42F6 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		F0E14DD12D4861A100ED42F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F0E14DD32D4861A100ED42F6 /* PokeListConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListConstructor.swift; sourceTree = "<group>"; };
 		F0E14DD42D4861A100ED42F6 /* PokeListRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeListRepository.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				F04C0CE02D4987A6004C6DC3 /* Handlers */,
-				F0E14DCF2D485B4E00ED42F6 /* Color */,
 				F0E14DCC2D485B2E00ED42F6 /* Statics */,
 				F0E14DC82D485B2400ED42F6 /* Network */,
 				F04C0CDC2D497E92004C6DC3 /* StringExtension.swift */,
@@ -259,14 +256,6 @@
 				F04C0CD62D491550004C6DC3 /* Constants.swift */,
 			);
 			path = Statics;
-			sourceTree = "<group>";
-		};
-		F0E14DCF2D485B4E00ED42F6 /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				F0E14DCE2D485B4E00ED42F6 /* UIColor+extension.swift */,
-			);
-			path = Color;
 			sourceTree = "<group>";
 		};
 		F0E14DD22D4861A100ED42F6 /* Preview Content */ = {
@@ -434,7 +423,6 @@
 				F0E14DCD2D485B2E00ED42F6 /* ApiConstants.swift in Sources */,
 				47FE7B1F2D49338C001D40D0 /* PokeDetailViewModel.swift in Sources */,
 				F04C0CDD2D497E92004C6DC3 /* StringExtension.swift in Sources */,
-				F0E14DD02D485B4E00ED42F6 /* UIColor+extension.swift in Sources */,
 				47FE7B242D493454001D40D0 /* PokeDetailConstructor.swift in Sources */,
 				F04C0CDF2D498782004C6DC3 /* NetworkMonitor.swift in Sources */,
 				F0E14DCA2D485B2400ED42F6 /* NetworkService.swift in Sources */,

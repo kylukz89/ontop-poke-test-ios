@@ -52,6 +52,7 @@ struct PokeDetailView: View {
                                         let id = specie.url.extraIdByURL()
                                         NavigationLink(destination: PokeDetailView(pokeName: specie.name)) {
                                             PokeItemView(id: id, name: specie.name)
+                                                .frame(width: 150)
                                         }
                                     }
                                 }
