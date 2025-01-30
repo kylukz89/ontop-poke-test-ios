@@ -2,6 +2,7 @@
 import Foundation
 
 internal enum PokeListConstructor: NetworkConstructor {
+    
     case getPokemonSpecies(limit: Int, offset: Int)
     
     internal var path: String {
@@ -35,10 +36,7 @@ internal enum PokeListConstructor: NetworkConstructor {
     internal var parameters: Parameters? {
         switch self {
         case .getPokemonSpecies(let limit, let offset):
-            return [
-                "limit": limit,
-                "offset": offset
-            ]
+            return ["limit": limit, "offset": offset]
         }
     }
 }

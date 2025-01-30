@@ -14,7 +14,7 @@ struct ErrorScreen: View {
         VStack(spacing: 16) {
             switch type {
             case .noContent:
-                Text("No Content Available")
+                Text(NSLocalizedString("no_content_available", comment: "No content available message"))
                     .font(.headline)
                     .foregroundColor(.gray)
             case .loading:
@@ -22,11 +22,11 @@ struct ErrorScreen: View {
                     .progressViewStyle(CircularProgressViewStyle())
             case .apiError(let retryAction):
                 VStack {
-                    Text("An error occurred. Please try again.")
+                    Text(NSLocalizedString("an_error_occurred", comment: "Generic API error message"))
                         .font(.headline)
                         .foregroundColor(.red)
                     Button(action: retryAction) {
-                        Text("Try Again")
+                        Text(NSLocalizedString("try_again", comment: "Retry button text"))
                             .padding()
                             .background(Color.blue)
                             .foregroundColor(.white)
@@ -38,18 +38,18 @@ struct ErrorScreen: View {
         .padding()
     }
 }
- 
+
 struct BaseView<Content: View>: View {
     
     @StateObject private var networkMonitor = NetworkMonitor()
     @Binding var errorType: ErrorScreenType?
     let content: () -> Content
-
+    
     init(errorType: Binding<ErrorScreenType?>, @ViewBuilder content: @escaping () -> Content) {
         self._errorType = errorType
         self.content = content
     }
-
+    
     var body: some View {
         ZStack {
             content().opacity(errorType == nil ? 1 : 0)

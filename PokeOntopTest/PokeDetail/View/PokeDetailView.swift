@@ -41,7 +41,7 @@ struct PokeDetailView: View {
                             .bold()
                         
                         if !$viewModel.speciesList.isEmpty {
-                            Text("Evolution Chain")
+                            Text(NSLocalizedString("evo_chain", comment: ""))
                                 .font(.title2)
                                 .bold()
                                 .padding(.top, 10)
@@ -81,7 +81,7 @@ struct PokeDetailView: View {
                 errorScreenType = nil
             }
         }
-        .navigationTitle("Pokemon Detail")
+        .navigationTitle(NSLocalizedString("poke_detail", comment: ""))
     }
     
     private func determineErrorType() -> ErrorScreenType? {
