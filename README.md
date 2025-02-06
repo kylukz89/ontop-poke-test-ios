@@ -2,8 +2,6 @@
 
 A SwiftUI-based Pokémon Pokédex application built with **MVVM architecture**, unit and snapshot tests, and robust error handling. The project follows **SOLID principles** and **Clean Code** practices while leveraging external libraries for snapshot testing.
 
-📌 **Repository:** [GitHub - kylukz89/ontop-poke-test-ios](https://github.com/kylukz89/ontop-poke-test-ios)  
-
 ---
 
 ## **Features**
@@ -55,14 +53,7 @@ As part of showcasing **modern iOS development skills**, I, **Igor Maximo**, dec
 ### **Requirements**
 - **Xcode 15+**  
 - **iOS 17+**  
-
-### **Clone the Repository**
-
-```sh
-git clone https://github.com/kylukz89/ontop-poke-test-ios.git
-cd ontop-poke-test-ios
-```
-
+ 
 ### **Open the Project**
 
 ```sh
